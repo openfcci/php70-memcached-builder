@@ -8,7 +8,7 @@ else
     a2enmod rewrite
 fi
 
-export ENVIRONMENT=docker
+rm -f /var/run/apache2/apache2.pid
 source /etc/apache2/envvars
 apachectl configtest
 tail -F /var/log/apache2/* &
